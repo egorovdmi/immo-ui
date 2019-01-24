@@ -1,0 +1,15 @@
+# immo server
+
+this repo contains the ui for the (https://github.com/pmdroid/)[immo-server]
+
+### Install
+```
+git clone git@github.com:pmdroid/immo-ui.git
+cd immo-ui/
+yarn
+```
+
+### Build
+```
+yarn build
+```
