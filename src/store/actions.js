@@ -50,7 +50,8 @@ export default {
       url: `${process.env.VUE_APP_API_ENDPOINT}/api/expose/hide`,
       method: "POST",
       data: {
-        id: expose.id
+        id: expose.id,
+        createdAt: expose.createdAt
       },
       headers: {
         Authorization: `Bearer ${state.authToken}`
