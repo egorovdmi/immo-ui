@@ -7,8 +7,6 @@ const app = express();
 const PORT = process.env.PORT || 80;
 const DIST_FOLDER = join(process.cwd(), "dist");
 
-console.log(process);
-
 // Server static files from /browser
 app.get("*.*", express.static(DIST_FOLDER));
 
