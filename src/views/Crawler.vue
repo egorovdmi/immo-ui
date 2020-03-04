@@ -40,7 +40,7 @@ export default {
     crawlerList() {
       return this.$store.getters.crawlerList.map(item => ({
         ...item,
-        lastTimeCrawled: format(item.lastTimeCrawled, "DD.MM.YYYY HH:mm")
+        lastTimeCrawled: format(item.lastTimeCrawled, "dd.MM.yyyy HH:mm")
       }));
     }
   },

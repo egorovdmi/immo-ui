@@ -4,7 +4,7 @@ var join = require("path").join;
 // Express server
 const app = express();
 
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 8081;
 const DIST_FOLDER = join(process.cwd(), "dist");
 
 // Server static files from /browser
