@@ -25,7 +25,7 @@ const messaging = firebase.messaging();
 const sendTokenToServer = (store, token) =>
   axios({
     method: "POST",
-    url: "/api/push/subscribe",
+    url: `${process.env.VUE_APP_API_ENDPOINT}/api/push/subscribe`,
     data: { token, oldToken: store.getters.pushToken },
     headers: {
       Authorization: `Bearer ${store.getters.authToken}`

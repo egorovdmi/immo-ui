@@ -152,7 +152,9 @@ import {
 export default {
   data: () => ({ isLoading: true }),
   async created() {
-    const { data } = await this.$axios(`/api/expose/${this.$route.params.id}`);
+    const { data } = await this.$axios(
+      `${process.env.VUE_APP_API_ENDPOINT}/api/expose/${this.$route.params.id}`
+    );
     this.$store.commit(MUTATION_ADD_EXPOSE_TO_LIST, data);
     this.isLoading = false;
   },

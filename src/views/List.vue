@@ -160,7 +160,9 @@ export default {
     ]
   }),
   async created() {
-    const { data } = await this.$axios("/api/expose");
+    const { data } = await this.$axios(
+      `${process.env.VUE_APP_API_ENDPOINT}/api/expose`
+    );
     this.$store.commit(MUTATION_SET_EXPOSE_LIST, data);
     this.isLoading = false;
   },
